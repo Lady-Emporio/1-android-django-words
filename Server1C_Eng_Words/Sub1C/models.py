@@ -9,7 +9,12 @@ class Word(models.Model):
         return '<Word: %s: %s-%s>' % (self.pk, self.eng, self.ru)
     def GetFields():
         return ["eng","ru","eng_value","id"]
-
+    class Meta:
+        verbose_name_plural="Слова"
+        verbose_name="Слово"
+        ordering=["-id",]
+    def get_absolute_url(self):
+        return "/word/%i/" % self.id
 #{
 #	"#value": {
 #		"Ref": "62209184-12cf-11eb-a204-7824af459690",

@@ -8,8 +8,10 @@ from .models import *
 
 @csrf_exempt
 def index(request):
-    return HttpResponse("Main page words. "+str(datetime.datetime.now()))
-
+    #return HttpResponse("Main page words. "+str(datetime.datetime.now()))
+    data="Main page words. "+str(datetime.datetime.now())
+    word=Word.objects.get(pk=1)
+    return render(request, 'index.html', {'content': data,"MyTitle":"Бууу","word":word})
 
 @csrf_exempt
 def update_Word(request):

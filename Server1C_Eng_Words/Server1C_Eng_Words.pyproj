@@ -43,11 +43,17 @@
     <Compile Include="Sub1C\models.py" />
     <Compile Include="Sub1C\tests.py" />
     <Compile Include="Sub1C\views.py" />
+    <Compile Include="Sub1C\WordViews.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Sub1C\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="Sub1C\templates\Sub1C\base.html" />
     <Content Include="Sub1C\templates\Sub1C\index.html" />
+    <Content Include="Sub1C\templates\word.html" />
+    <Content Include="Sub1C\templates\wordsList.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Server1C_Eng_Words\" />

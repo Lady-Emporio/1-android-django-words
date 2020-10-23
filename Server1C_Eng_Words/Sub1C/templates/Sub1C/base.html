@@ -1,0 +1,15 @@
+<html>
+<head><title></title></head>
+<body>
+    {% block title %} <h1>Base.html</h1>
+    <p>{{MyTitle}}</p>
+    {% endblock %}
+    <div></div>
+{% block content %} www {% endblock %}
+    <div></div>
+    {% block floor %} Block floor {% endblock %}
+    <div>
+        <a href="{{word.get_absolute_url}}">Words get_absolute_url 1</a>
+    </div>
+</body>
+</html>
